@@ -2,14 +2,14 @@
 ### Descrição
 Este projeto é uma aplicação de dashboard interativa para visualização de dados de turismo. Ele permite o upload de arquivos CSV, aplicação de filtros, personalização de cores e fontes, além da exibição de métricas básicas relacionadas aos dados carregados.
 
-A interface foi desenvolvida com Streamlit e utiliza bibliotecas como Pandas para manipulação de dados e Altair para visualizações gráficas.
+A interface foi desenvolvida com Streamlit e utiliza bibliotecas como Pandas para manipulação de dados e Seaborn e Matplotlib para visualizações gráficas.
 
 ## Funcionalidades
 * Upload de arquivos CSV de turismo.
 * Personalização da cor de fundo e cor das fontes da página.
 * Filtros interativos para os dados de turismo por país.
 * Gráficos de pizza e linha para visualização dos dados.
-* Exibição de métricas básicas como soma, média e contagem de registros.
+* Exibição de métricas básicas como soma e média de registros.
 
 TP3 - Front-End/
 │
