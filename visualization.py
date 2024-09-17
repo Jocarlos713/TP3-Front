@@ -79,6 +79,7 @@ def exibir_grafico_linha_por_continente(df):
 def exibir_tabela_interativa():
     st.subheader("Tabela Interativa de Dados")
 
+
     # Carregar e tratar os dados usando a função que você forneceu
     df = carregar_e_tratar_dados()
 
@@ -125,6 +126,14 @@ def exibir_histograma(df):
     # Exibir o gráfico
     st.pyplot(fig)
 
+    # Média geral das entradas por mês
+    media_mes = df[coluna].mean()
+    st.metric(f"Média de {coluna}", round(media_mes))
+
+    # Somar total de entradas por mês (se houver colunas mensais como janeiro, fevereiro etc.)
+    soma_mes = df[coluna].sum()
+    st.metric(f"Soma de {coluna}", round(soma_mes))
+
 # Função para exibir o scatter plot (dispersão)
 def exibir_scatter_plot(df):
     st.subheader("Gráfico de Dispersão (Scatter Plot)")
@@ -142,6 +151,4 @@ def exibir_scatter_plot(df):
     
     # Exibir o gráfico
     st.pyplot(fig)
-
-
 

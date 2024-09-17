@@ -16,7 +16,6 @@ def pagina_dashboard():
     df = carregar_e_tratar_dados()
 
     # Exibir o dataframe
-    st.subheader("Tabela de Dados")
     exibir_tabela_interativa()
 
     # Exibir o gráfico de pizza
@@ -79,7 +78,7 @@ def aplicar_color_picker():
     # Color Picker para o texto (fonte)
     cor_fonte = st.color_picker("Escolha a cor da fonte", "#FFFFFF")  # Branco por padrão
 
-    # Aplicar as cores escolhidas
+    # Aplicar as cores escolhidas para o fundo e o texto
     st.markdown(
         f"""
         <style>
@@ -87,11 +86,10 @@ def aplicar_color_picker():
                 background-color: {cor_fundo};
                 color: {cor_fonte};
             }}
+            h1, h2, h3, h4, h5, h6, p, div, span {{
+                color: {cor_fonte} !important;
+            }}
         </style>
         """,
         unsafe_allow_html=True
     )
-
-    # Mostrando as cores escolhidas para confirmação
-    st.write(f"Cor de fundo escolhida: {cor_fundo}")
-    st.write(f"Cor de fonte escolhida: {cor_fonte}")
